@@ -1,0 +1,179 @@
+<html>
+    <head>
+        <title>Module 2 Project Excercise</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">Project Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              
+              <form name="searchForm" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <!-- <li class="nav-item"> -->
+                <a class="nav-link disabled" href="#">Submit</a>
+              <!-- </li> -->
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="register.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="login.html">Login</a>
+                </li>
+                
+              </ul>
+              </div>
+            </div>
+          </nav>
+
+        <main>
+            <section> 
+                <div class="row" style="padding-top: 5%; margin-left: 13%;">
+                    <!-- <br><br><br> -->
+                    <h3>John Doe</h3>  
+                    <p>john.doe@gmail.com</p>
+                    
+                </div>
+                
+                <div class="container bg-light" style="padding-top: 5%; padding-top: 2%;">
+                    <!-- <h2>Bost</h2> <span>bost@edconnect.ng</span> -->
+                    
+                    <div class="row">
+                        <div class="col-md-4">
+                            <p>Program</p>
+                            <p>Computer Information Systems</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Matriculation number</p>
+                            <p>33/3333</p>
+                        </div>
+                        <div class="col-md-4">
+                            <p>Graduation Year</p>
+                            <p>2018</p>
+                        </div>
+                    </div>
+                </div>
+       
+            <!-- </section>
+            <section> -->
+                <div class="container" style="padding-top: 5%;"> 
+                    <h3>Update Profile</h3> 
+                    <hr>
+                <div class="row mx-auto w-75">
+                    <div class="col-md-3">
+                        <form class="form-row">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="firstName" class="form-label">First name</label>  
+                                    <input class="form-control" type="text" name="firstName"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="emailAddress" class="form-label">Email Address</label> 
+                                    <input class="form-control" type="email" name="email"/>
+                                </div> 
+                                <div class="form-group">
+                                    <label for="matricNumber" class="form-label">Matriculation number</label>
+                                    <input type="text" class="form-control" name="matricNumber">
+                                    
+                                </div> 
+                                <div>   
+                                    <input class="btn btn-primary" type="submit" value="Update Password"/>
+                                     
+                               </div>
+                            </div> 
+                             
+                            
+                        <!-- </form> -->
+                    </div>
+
+                    <div class="col-md-6">
+                        <!-- <form class="form-row">  -->
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="lastName" class="form-label">Last name</label>  
+                                    <input class="form-control" type="text" name="lastName"/>
+                                </div>  
+                                        <div class="form-group">
+                                            <label for="program" class="form-label">Program</label>
+                                    <select class="form-control" name="program">
+                                        <option value="">Choose...</option>
+                                        <option value="computer_science">Computer Science</option>
+                                        <option value="computer_information_systems">Computer Information Systems</option>
+                                        <option value="computer_technology">Computer Technology</option>
+                                    </select>
+                                        </div> 
+                                        <div class="form-group">
+                                            <label for="graduationYear" class="form-label">Graduation year</label>
+                                            <select class="form-control" name="graduationYear">
+                                                <option value="">Choose...</option>
+                                                <option value="2013">2013</option>
+                                                <option value="2014">2014</option>
+                                                <option value="2015">2015</option>
+                                                <option value="2016">2016</option>
+                                                <option value="2017">2017</option>
+                                                <option value="2018">2018</option>
+                                                <option value="2019">2019</option>
+                                                <option value="2020">2020</option>
+                                            </select>
+                                        </div> 
+                            </div>
+                            
+                            
+                            
+                        </form>
+                    </div>
+                   
+                </div>    
+            </div> 
+ 
+            </section>
+
+            <section>
+                <div class="container" style="padding-top: 5%;">
+                    <h3>Change Password</h3>
+                    <hr>
+                    <div class="row mx-auto w-75">
+                        <form name="changePassword" class="form-row">
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="currentPassword" class="form-label">Current password</label>
+                                    <input class="form-control" type="password" name="currentPassword" placeholder="Current password"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group">
+                                    <label for="newPassword" class="form-label">New password</label>
+                                    <input class="form-control" type="password" name="newPassword" placeholder="Your new password"/>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="form-group"> 
+                                    <label for="confirmPassword" class="form-label">Confirm password</label>
+                                    <input class="form-control" type="password" name="confirmPassword" placeholder="Confirm new password"/>
+                                </div>
+                            </div>
+                            <input type="submit" class="btn btn-primary" value="Change Password"/>
+                        </div>  
+                       
+                    </form>
+                    </div>
+                </div>
+                
+                
+            </section>
+        </main>
+        <footer class="footer"  style="padding-top: 1%;">
+            <div class="container text-right pt-30 p-3 bg-light">
+                <span class="text-muted">Project Explorer &copy; 2021 - Edconnect</span>
+            </div>
+        </footer>
+    </body>
+</html>
