@@ -57,7 +57,8 @@
                             <p>2021-03-27</p>
                         </div>
                         <div class="col-md-3 pb-2 d-flex justify-content-end">
-                            <button class="btn btn-primary">View Project</button>
+                            <a href="viewproject.html" class="btn btn-primary">View Project</a>
+                            <!-- <button class="btn btn-primary">View Project</button> -->
                         </div>
                     </div>
                 </div>
@@ -66,43 +67,44 @@
             <section>
                 <div class="container">
                     <div class="row">
-                        <form> 
-                            <div class="col-md-6 pt-5">
-                                <h5>Edit Project</h5>
-                                <hr>
-                                <div class="form-group">
-                                    <label for="projectName" class="form-label">Project name</label>
-                                    <input type="text" class="form-control" name="name" placeholder="Project 1">
-                                </div>
-                                <div class="form-group">
-                                    <label for="abstract" class="form-label">Project abstract</label>
-                                    <textarea rows="8" class="form-control" name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
-                                </div>
-                                <div class="form-group">
-                                    <label for="author" class="form-label">Author(s)</label>
-                                    <input type="text" class="form-control" name="authors" placeholder="Sodeeq Taiwo">
-                                </div><div class="form-group">
-                                    <label for="tag" class="form-label">Tag(s)</label>
-                                    <input type="text" class="form-control" name="tags" placeholder="#web">
-                                </div> 
-                                <button class="btn btn-primary" type="submit">Save</button> 
+                        <form class="form-row">
+                        <div class="col-md-6 pt-5">
+                            <h5>Edit Project</h5>
+                            <hr>
+                            <div class="form-group">
+                                <label for="projectName" class="form-label">Project name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Project 1">
                             </div>
-        
-                            <div class="col-md-6 pt-5">
-                                <h5>Manage Project files</h5>
-                                <hr>
-                                <input type="file" class="form-control" name="projectFile"/>
-                                <hr>
-                                <div class="card">
-                                    <div class="card-header">
-                                        <h6>Project files</h6>
-                                    </div>
-                                    <div class="card-body d-flex justify-content-center">
-                                        <p>No file uploaded yet</p>
-                                    </div>
+                            <div class="form-group">
+                                <label for="abstract" class="form-label">Project abstract</label>
+                                <textarea rows="8" class="form-control" name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="author" class="form-label">Author(s)</label>
+                                <input type="text" class="form-control" name="authors" placeholder="Sodeeq Taiwo">
+                            </div><div class="form-group">
+                                <label for="tag" class="form-label">Tag(s)</label>
+                                <input type="text" class="form-control" name="tags" placeholder="#web">
+                            </div> 
+                            <button class="btn btn-primary" type="submit">Save</button>
+                            <!-- <input type="submit" value="Save" class="btn btn-primary"> -->
+                        </div>
+    
+                        <div class="col-md-6 pt-5">
+                            <h5>Manage Project files</h5>
+                            <hr>
+                            <input type="file" class="form-control" name="projectFile"/>
+                            <hr>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Project files</h6>
+                                </div>
+                                <div class="card-body d-flex justify-content-center">
+                                    <p>No file uploaded yet</p>
                                 </div>
                             </div>
-                    </form>
+                        </div>
+                        </form>
                     </div>
                 </div>
                 
