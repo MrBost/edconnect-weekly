@@ -314,11 +314,11 @@ const fetchGraduationYears = async () => {
             let projectAuthors = document.getElementById('project_authors');
             let projectTags = document.getElementById('project_tags');
             let projectAuthor = document.getElementById('project_author');
-            projectName.innerHTML = data.name;
-            projectAbstract.innerHTML = data.abstract;
-            projectAuthors.innerHTML = data.authors;
-            projectTags.innerHTML = data.tags;
-            projectAuthor.innerHTML = user; 
+            projectName.textContent = data.name;
+            projectAbstract.textContent = data.abstract;
+            projectAuthors.textContent = data.authors;
+            projectTags.textContent = data.tags;
+            projectAuthor.textContent = user; 
         })
       }
 
