@@ -183,14 +183,15 @@ const fetchGraduationYears = async () => {
 
   //process the create project form
   const createProjectFormSubmit = ()=>{
-      let submitFormEl = document.getElementById('submit-project');
-      let nameEl = document.querySelector('#createProjectForm input[name="name"]');
-      let abstractEl = document.querySelector('#createProjectForm textarea[name="abstract"]');
-      let authorsEl = document.querySelector('#createProjectForm input[name="authors"]'); 
-      let tagsEl = document.querySelector('#createProjectForm input[name="tags"]'); 
-
+      
+    let submitFormEl = document.getElementById('submit-project');
       submitFormEl.addEventListener('click',(e)=>{
           e.preventDefault();  
+          
+          let nameEl = document.querySelector('#createProjectForm input[name="name"]');
+          let abstractEl = document.querySelector('#createProjectForm textarea[name="abstract"]');
+          let authorsEl = document.querySelector('#createProjectForm input[name="authors"]');
+          let tagsEl = document.querySelector('#createProjectForm input[name="tags"]');
           let formObj ={
             "name": nameEl.value,
             "abstract": abstractEl.value,
