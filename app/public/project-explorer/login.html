@@ -1,0 +1,84 @@
+<html>
+    <head>
+        <title>Module 2 Project Excercise</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+    </head>
+    <body>
+
+        
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+        <a class="navbar-brand" href="#">Project Explorer</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+          
+          <form name="searchForm" class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
+            <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+          <!-- <li class="nav-item"> -->
+            <a class="nav-link disabled" href="#">Submit</a>
+          <!-- </li> -->
+          <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+              <a class="nav-link" id="logout" href="register.html">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" id="username" href="login.html">Login</a>
+            </li>
+            
+          </ul>
+          </div>
+        </div>
+      </nav>
+          
+        <main>
+            <section>
+                
+                <div class="container" style="padding-top: 2%;">
+                    <br><br>
+                    
+                <form class="mx-auto w-75" id="loginForm">
+                    <h3>Login</h3>
+                  <div class="col-md-6 alert" id="error-alert"></div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="form-group">
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email address</label>  
+                                    <input class="form-control" type="email" name="email" placeholder="Enter email"/>
+                                </div>
+                                <div class="form-group">
+                                    <label for="password" class="form-label">Password</label> 
+                                    <input class="form-control" type="password" name="password" placeholder="Password"/>
+                                </div> 
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                    <div>    
+                        <button class="btn btn-primary" id="submit-login" type="submit">Login</button> 
+                        
+                          
+                    </div>
+                </form>
+                    
+                </div>
+            
+            </section>
+        </main>
+
+        <footer class="footer"  style="padding-top: 1%;">
+            <div class="container text-right pt-30 p-3 bg-light">
+                <span class="text-muted">Project Explorer &copy; 2021 - Edconnect</span>
+            </div>
+        </footer>
+
+        <script src="js/app.js"></script>
+        
+    </body>
+</html>

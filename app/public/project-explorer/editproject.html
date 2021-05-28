@@ -1,0 +1,122 @@
+<html>
+    <head>
+        <title>Module 2 Project Excercise</title>
+    </head>
+    <body>
+        <link rel="stylesheet" href="css/bootstrap.min.css"/>
+        
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-primary">
+            <a class="navbar-brand" href="#">Project Explorer</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+      
+            <div class="collapse navbar-collapse" id="navbarsExampleDefault">
+              
+              <form name="searchForm" class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search Projects" aria-label="Search">
+                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">Search</button>
+              </form>
+              <!-- <li class="nav-item"> -->
+                <a class="nav-link disabled" href="#">Submit</a>
+              <!-- </li> -->
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav"></div>
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                  <a class="nav-link" id="logout" href="register.html">Sign Up</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" id="username" href="login.html">Login</a>
+                </li>
+                
+              </ul>
+              </div>
+            </div>
+          </nav>
+
+        <main>
+            <section>
+                <br><br>
+                <div class="row" style="padding-top: 2%; margin-left: 13%;">
+                    
+                    <h5>Project 1</h5>   
+                    
+                </div>
+                <div class="container bg-light p-2"> 
+                    <div class="row">
+                        <div class="col">
+                            <p>Created By</p>
+                            <p>Sodeeq Taiwo</p>
+                        </div>
+                        <div class="col">
+                            <p>Date Created</p>
+                            <p>2021-03-27</p>
+                        </div>
+                        <div class="col">
+                            <p>Last Updated</p>
+                            <p>2021-03-27</p>
+                        </div>
+                        <div class="col pb-2 d-flex justify-content-end">
+                            <a href="viewproject.html" class="btn btn-primary">View Project</a>
+                            <!-- <button class="btn btn-primary">View Project</button> -->
+                        </div>
+                    </div>
+                </div>
+ 
+            </section>
+            <section>
+                <div class="container">
+                    <div class="row">
+                        <form class="form-row">
+                        <div class="col pt-5">
+                            <h5>Edit Project</h5>
+                            <hr>
+                            <div class="form-group">
+                                <label for="projectName" class="form-label">Project name</label>
+                                <input type="text" class="form-control" name="name" placeholder="Project 1">
+                            </div>
+                            <div class="form-group">
+                                <label for="abstract" class="form-label">Project abstract</label>
+                                <textarea rows="8" class="form-control" name="abstract" placeholder="Project 1 is a very interesting project"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="author" class="form-label">Author(s)</label>
+                                <input type="text" class="form-control" name="authors" placeholder="Sodeeq Taiwo">
+                            </div><div class="form-group">
+                                <label for="tag" class="form-label">Tag(s)</label>
+                                <input type="text" class="form-control" name="tags" placeholder="#web">
+                            </div> 
+                            <button class="btn btn-primary" type="submit">Save</button>
+                            <!-- <input type="submit" value="Save" class="btn btn-primary"> -->
+                        </div>
+    
+                        <div class="col pt-5">
+                            <h5>Manage Project files</h5>
+                            <hr>
+                            <input type="file" class="form-control" name="projectFile"/>
+                            <hr>
+                            <div class="card">
+                                <div class="card-header">
+                                    <h6>Project files</h6>
+                                </div>
+                                <div class="card-body d-flex justify-content-center">
+                                    <p>No file uploaded yet</p>
+                                </div>
+                            </div>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </section>
+        </main>
+
+        <footer class="footer"  style="padding-top: 1%;">
+            <div class="container text-right pt-30 p-3 bg-light">
+                <span class="text-muted">Project Explorer &copy; 2021 - Edconnect</span>
+            </div>
+        </footer>
+
+        <script src="js/app.js"></script>
+    </body>
+</html>
