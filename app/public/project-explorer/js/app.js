@@ -319,14 +319,14 @@ const fetchGraduationYears = async () => {
             projectName.innerHTML = `<h5>${res.name}</h5>`;
             projectAbstract.textContent = res.abstract;
 
-            // let authors = res.authors.map((item) => {
-            //     return `<p class="card-text">${item}</p>`
-            // }).join("");
-            // project_authors.innerHTML = authors;
+            let authors = res.authors.map((item) => {
+                return `<p class="card-text">${item}</p>`
+            }).join("");
+            project_authors.innerHTML = authors;
 
 
-            // let projectTags = res.tags;
-            // document.getElementById("project_tags").innerHTML = projectTags
+            let projectTags = res.tags;
+            document.getElementById("project_tags").innerHTML = projectTags
 
 
             let project_author = document.getElementById("project_author");
@@ -338,8 +338,8 @@ const fetchGraduationYears = async () => {
                 })
                 .catch(e => console.log(e))
         
-            projectAuthors.textContent = data.authors;
-            projectTags.textContent = data.tags;
+            // projectAuthors.textContent = data.authors;
+            // projectTags.textContent = data.tags;
             // projectAuthor.textContent = user; 
         })
       }
