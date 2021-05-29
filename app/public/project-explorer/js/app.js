@@ -301,9 +301,9 @@ const fetchGraduationYears = async () => {
         let paramString = window.location.href;
         var searchParam = new URLSearchParams(paramString);
         var projectId = searchParam.get("http://localhost:4000/project-explorer/viewproject.html?id");
-        let params = new URLSearchParams(document.location.search.substring(1));
-        let pId = params.get("id");
-        let url= `/api/projects/${pId}`;
+        // let params = new URLSearchParams(document.location.search.substring(1));
+        // let pId = params.get("id");
+        let url= `/api/projects/${projectId}`;
         await fetch(url,{
             headers: {
                 'Content-Type': 'application/json'
@@ -329,18 +329,18 @@ const fetchGraduationYears = async () => {
             document.getElementById("project_tags").innerHTML = projectTags
 
 
-            // let project_author = document.getElementById("project_author");
+            let project_author = document.getElementById("project_author");
 
-            // fetch(`/api/users/${res.createdBy}`)
-            //     .then(res => res.json())
-            //     .then((res) => {
-            //         project_author.textContent = `${res.firstname} ${res.lastname} `
-            //     })
-            //     .catch(e => console.log(e))
+            fetch(`/api/users/${res.createdBy}`)
+                .then(res => res.json())
+                .then((res) => {
+                    project_author.textContent = `${res.firstname} ${res.lastname} `
+                })
+                .catch(e => console.log(e))
         
             // projectAuthors.textContent = data.authors;
             // projectTags.textContent = data.tags;
-            projectAuthor.textContent = user; 
+            // projectAuthor.textContent = user; 
         })
       }
 
