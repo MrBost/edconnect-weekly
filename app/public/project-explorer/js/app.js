@@ -346,8 +346,50 @@ if (window.location.href.includes("login.html")){
 if (window.location.href.includes('createproject.html')){
     redirectToLogin();
 }
-if (window.location.href.includes('viewproject.html')){
-    viewProjectById(); 
-}
+// if (window.location.href.includes('viewproject.html')){
+//     viewProjectById(); 
+// }
 
 window.onload = fetchUsername();
+
+
+if (window.location.href.includes('viewproject.html')) {
+    window.onload = function () {
+
+        let params = new URLSearchParams(document.location.search.substring(1));
+        let pId = params.get("id");
+
+        fetch(`/api/projects/${pId}`)
+            .then(res => res.json())
+            .then((res) => {
+                const project_name = document.getElementById("project_name");
+                project_name.innerHTML = `<h3>${res.name}</h3>`;
+
+                const project_abstract = document.getElementById("project_abstract");
+                project_abstract.textContent = `${res.abstract}`;
+
+                const project_authors = document.getElementById("project_authors");
+
+                let authors = res.authors.map((item) => {
+                    return `<p class="card-text">${item}</p>`
+                }).join("");
+                project_authors.innerHTML = authors;
+
+
+                let projectTags = res.tags;
+                document.getElementById("project_tags").innerHTML = projectTags
+
+
+                let project_author = document.getElementById("project_author");
+
+                fetch(`/api/users/${res.createdBy}`)
+                    .then(res => res.json())
+                    .then((res) => {
+                        project_author.textContent = `${res.firstname} ${res.lastname} `
+                    })
+                    .catch(e => console.log(e))
+            })
+            .catch(e => console.log(e))
+
+    }
+}
