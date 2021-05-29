@@ -297,11 +297,13 @@ const fetchGraduationYears = async () => {
   //process viewproject 
   
       const viewProjectById = async () =>{
-        const user = await createdBy();
+        // const user = await createdBy();
         let paramString = window.location.href;
         var searchParam = new URLSearchParams(paramString);
         var projectId = searchParam.get("http://localhost:4000/project-explorer/viewproject.html?id");
-        let url= `/api/projects/${projectId}`;
+        let params = new URLSearchParams(document.location.search.substring(1));
+        let pId = params.get("id");
+        let url= `/api/projects/${pId}`;
         await fetch(url,{
             headers: {
                 'Content-Type': 'application/json'
