@@ -138,7 +138,7 @@ const fetchGraduationYears = async () => {
         .then(response=>
              response.json()
         ) 
-        return username.firstname;
+        return `${username.firstname} ${username.lastname}`;
       }  
   } 
 
@@ -314,7 +314,7 @@ const fetchGraduationYears = async () => {
             let projectAuthors = document.getElementById('project_authors');
             let projectTags = document.getElementById('project_tags');
             let projectAuthor = document.getElementById('project_author');
-            projectName.textContent = data.name;
+            projectName.innerHTML = `<h5>${data.name}</h5>`;
             projectAbstract.textContent = data.abstract;
             projectAuthors.textContent = data.authors;
             projectTags.textContent = data.tags;
