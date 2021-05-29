@@ -308,17 +308,37 @@ const fetchGraduationYears = async () => {
             },
             method: 'GET'
         }).then(response=>response.json())
-        .then(data=>{
+        .then(res=>{
             let projectName = document.getElementById('project_name');
             let projectAbstract = document.getElementById('project_abstract');
             let projectAuthors = document.getElementById('project_authors');
-            let projectTags = document.getElementById('project_tags');
+            // let projectTags = document.getElementById('project_tags');
             let projectAuthor = document.getElementById('project_author');
-            projectName.innerHTML = `<h5>${data.name}</h5>`;
-            projectAbstract.textContent = data.abstract;
-            projectAuthors.textContent = data.authors;
-            projectTags.textContent = data.tags;
-            projectAuthor.textContent = user; 
+            projectName.innerHTML = `<h5>${res.name}</h5>`;
+            projectAbstract.textContent = res.abstract;
+
+            let authors = res.authors.map((item) => {
+                return `<p class="card-text">${item}</p>`
+            }).join("");
+            project_authors.innerHTML = authors;
+
+
+            let projectTags = res.tags;
+            document.getElementById("project_tags").innerHTML = projectTags
+
+
+            let project_author = document.getElementById("project_author");
+
+            fetch(`/api/users/${res.createdBy}`)
+                .then(res => res.json())
+                .then((res) => {
+                    project_author.textContent = `${res.firstname} ${res.lastname} `
+                })
+                .catch(e => console.log(e))
+        
+            // projectAuthors.textContent = data.authors;
+            // projectTags.textContent = data.tags;
+            // projectAuthor.textContent = user; 
         })
       }
 
@@ -346,14 +366,14 @@ if (window.location.href.includes("login.html")){
 if (window.location.href.includes('createproject.html')){
     redirectToLogin();
 }
-// if (window.location.href.includes('viewproject.html')){
-//     viewProjectById(); 
-// }
+if (window.location.href.includes('viewproject.html')){
+    viewProjectById(); 
+}
 
 window.onload = fetchUsername();
 
 
-if (window.location.href.includes('viewproject.html')) {
+if (window.location.href.includes('viewprojecst.html')) {
     window.onload = function () {
 
         let params = new URLSearchParams(document.location.search.substring(1));
