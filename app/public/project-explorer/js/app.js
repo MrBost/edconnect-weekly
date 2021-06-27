@@ -36,7 +36,7 @@ const fetchGraduationYears = async () => {
     //process the signup form
     const signupFormSubmit = ()=>{
         let submitFormEl = document.getElementById("submit-signup");
-        submitFormEl.addEventListener('click', (e) => {
+        submitFormEl.addEventListener('clisck', (e) => {
             e.preventDefault(); 
         
                 let dataObj = {
@@ -78,7 +78,7 @@ const fetchGraduationYears = async () => {
                 }).catch(error=>{
                     console.log('error',error);
                 });
-                
+
         })
     }
     
@@ -415,3 +415,43 @@ if (window.location.href.includes('viewprojecst.html')) {
 
     }
 }
+
+// let signupForm = document.getElementById("signupForm")
+// const alert = document.querySelector("#error-alert")
+// alert.style.display = "none";
+// function postData(event) {
+//     event.preventDefault()
+//     let signupData = {
+//         firstname: document.getElementsByName("firstName")[0].value,
+//         lastname: document.getElementsByName("lastName")[0].value,
+//         email: document.getElementsByName("email")[0].value,
+//         password: document.getElementsByName("password")[0].value,
+//         matricNumber: document.getElementsByName("matricNumber")[0].value,
+//         program: document.getElementsByName("program")[0].value,
+//         graduationYear: document.getElementsByName("graduationYear")[0].value,
+//     }
+//     fetch('/api/register', {
+//         method: 'POST',
+//         headers: {
+//             'Content-Type': 'application/json'
+//         },
+//         body: JSON.stringify(signupData)
+//     })
+//         .then(response => response.json())
+//         .then(response => {
+//             console.log(response)
+//             if (response.status == 'ok') {
+//                 document.cookie = `uid = ${response.data.id}; path=/`;
+//                 window.location.replace('index.html')
+//             }
+//             else{
+//                 alert.style.display = "block"
+//                 let errs = response.errors.toString().replaceAll(",", "<br>")
+//                 alert.innerHTML = errs;
+//             }
+//         })
+//         // .catch(error => {
+//         //     console.log(error)
+//         // })
+// }
+// signupForm.addEventListener('submit', postData)
