@@ -12,9 +12,9 @@ export default () => {
     let param = useParams(); 
 
     useEffect(()=>{
-        // const viewProjectById = async () =>{ 
+        const viewProjectById = async () =>{ 
             let url= `/api/projects/${param['id']}`;
-            fetch(url,{
+           await fetch(url,{
                 headers: {
                     'Content-Type': 'application/json'
                 },
@@ -34,9 +34,9 @@ export default () => {
                     })
                     .catch(e => console.log(e)) 
             })
-        //   }
-        //   viewProjectById();
-    })
+          }
+          viewProjectById();
+    },[])
     
 
     return (
@@ -65,7 +65,7 @@ export default () => {
                         <Col className="pb-2 d-flex justify-content-end">
                             <Nav variant="pills" className="justify-content-end">
                                 <Nav.Item>
-                                    <Nav.Link href="editproject" className="btn btn-primary">Edit Project</Nav.Link>
+                                    <Nav.Link href="#" className="btn btn-primary">Edit Project</Nav.Link>
                                 </Nav.Item>
 
                             </Nav>

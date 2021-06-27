@@ -43,19 +43,13 @@ const Header = (props) => {
         <>
             <Navbar bg="primary" variant="dark" className="justify-content-between">
                 <Nav>
-                    <Navbar.Brand href="/">Project Explorer</Navbar.Brand>
-                    {/* <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-                    <span className="navbar-toggler-icon"></span>
-                </button> */}
-
-                    {/* <div className="collapse navbar-collapse" id="navbarsExampleDefault"> */}
+                    <Navbar.Brand href="/">Project Explorer</Navbar.Brand> 
 
                     <Form inline>
                         <FormControl type="text" placeholder="Search Projects" />
                         <Button variant="outline-light" type="submit">Search</Button>
                     </Form>
                     <Nav className="disabled">
-                        {/* <Nav.Link href="/">Projects</Nav.Link> */}
                         <Nav.Link href="/">Submit</Nav.Link>
                     </Nav>
                 </Nav>
