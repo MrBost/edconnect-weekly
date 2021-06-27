@@ -39,7 +39,7 @@ export default () => {
         if(uid == ''){
             history.push("/login");
         }
-    })
+    },[])
 
     const handleCreateProject = (e)=>{ 
               e.preventDefault();  
@@ -72,6 +72,7 @@ export default () => {
 
     return (
         <Layout>
+            <>
             <Container style={{paddingTop: 5 + '%'}}>
             <h3 className="mx-auto w-75">Submit Project</h3>
             <Alert variant="danger" name="error-alert" className="alert-danger" show={showAlert}>
@@ -102,7 +103,8 @@ export default () => {
                             </Form.Group>
                         </Form.Row>
                         <Button variant="primary" type="submit" onClick={handleCreateProject}>Continue</Button>
-            </Container>      
+            </Container>   
+            </>   
         </Layout>
     )
 }
