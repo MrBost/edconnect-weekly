@@ -100,16 +100,16 @@ export default () => {
                             <hr></hr>
                             <div className="card">
                                 <div className="card-header" id="project_authors">
-                                    <h6>Author(s)</h6>
-                                </div>
-                                <div className="card-body">
-                                    {authors.map(author => {
+                                {authors.map(author => {
                                         return (
                                             <>
                                                 <p>{author}</p>
                                             </>
                                         )
-                                    })}
+                                    })} 
+                                </div>
+                                <div className="card-body">
+                                <p>Sodeeq Taiwo</p>
                                 </div>
                                 <div className="card-footer" id="project_tags">
                                     {tags.map(tag => {

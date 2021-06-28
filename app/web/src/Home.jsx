@@ -43,7 +43,7 @@ export default () => {
                             <h5>
                                 <Link to={`/projects/${data.id}`}>{data.name}</Link>
                             </h5>
-                            <h6 key={data.createdBy}>{data.authors.map(author=>author)}</h6>
+                            <h6 key={data.createdBy}>{data.authors.map(author=>author).join(',')}</h6>
                             <p>{data.abstract}</p>
                             <div key={data.name}>
                                 {data.tags.map(tag=><a href="#">{tag}</a>)}
