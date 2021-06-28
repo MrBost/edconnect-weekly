@@ -30,7 +30,7 @@ export default () => {
                     fetch(`/api/users/${res.createdBy}`)
                         .then(res => res.json())
                         .then((res) => {
-                            setUser(res.firstname, res.lastname)
+                            setUser(`${res.firstname } ${res.lastname}`)
                         })
                         .catch(e => console.log(e))
                 })
