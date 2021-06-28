@@ -84,6 +84,7 @@ export default () => {
                                 )
                             })}
                         </Alert>
+                        <Form id="createProjectForm">
                         <Form.Row>
                             <Form.Group as={Col} controlId="formGridProjectname">
                                 <Form.Label>Project Name</Form.Label>
@@ -103,6 +104,8 @@ export default () => {
                             </Form.Group>
                         </Form.Row>
                         <Button variant="primary" type="submit" onClick={handleCreateProject}>Continue</Button>
+                        </Form>
+                        
             </Container>   
             </>   
         </Layout>

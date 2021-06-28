@@ -36,7 +36,7 @@ export default () => {
                 </Jumbotron>
 
                 <Container>
-                    <Row>   
+                    <Row className="showcase">   
                     {projects.map(data => (
                     <Col key={data.id}>
                         <div className="project">
