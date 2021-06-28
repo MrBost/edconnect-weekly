@@ -1,7 +1,7 @@
 import Layout from "./shared/Layout";
 import { Container, Row, Col, Nav, Form, Button } from "react-bootstrap";
 import { useParams } from "react-router";
-import { useState, useEffect } from "react";
+import React,{ useState, useEffect } from "react";
 
 export default () => {
     const [name, setName] = useState("");

@@ -1,6 +1,6 @@
 import Layout from "./shared/Layout";
 import {Alert, Form, Col, Button, Container} from 'react-bootstrap'
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { useHistory } from "react-router-dom";
 
 export default () => {
