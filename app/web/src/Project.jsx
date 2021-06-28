@@ -1,7 +1,7 @@
 import Layout from "./shared/Layout";
 import { Container, Row, Col, Nav, Form, Button } from "react-bootstrap";
 import { useParams } from "react-router";
-import React,{ useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 
 export default () => {
     const [name, setName] = useState("");
@@ -9,35 +9,35 @@ export default () => {
     const [authors, setAuthors] = useState([]);
     const [tags, setTags] = useState([]);
     const [user, setUser] = useState("");
-    let param = useParams(); 
+    let param = useParams();
 
-    useEffect(()=>{
-        const viewProjectById = async () =>{ 
-            let url= `/api/projects/${param['id']}`;
-           await fetch(url,{
+    useEffect(() => {
+        const viewProjectById = async () => {
+            let url = `/api/projects/${param['id']}`;
+            await fetch(url, {
                 headers: {
                     'Content-Type': 'application/json'
                 },
                 method: 'GET'
-            }).then(response=>response.json())
-            .then(res=>{
-                setName(res.name);
-                setAbstract(res.abstract);
-                setAuthors(res.authors);
-                setTags(res.tags);
-                 
-    
-                fetch(`/api/users/${res.createdBy}`)
-                    .then(res => res.json())
-                    .then((res) => {
-                        setUser(res.firstname, res.lastname)  
-                    })
-                    .catch(e => console.log(e)) 
-            })
-          }
-          viewProjectById();
-    },[])
-    
+            }).then(response => response.json())
+                .then(res => {
+                    setName(res.name);
+                    setAbstract(res.abstract);
+                    setAuthors(res.authors);
+                    setTags(res.tags);
+
+
+                    fetch(`/api/users/${res.createdBy}`)
+                        .then(res => res.json())
+                        .then((res) => {
+                            setUser(res.firstname, res.lastname)
+                        })
+                        .catch(e => console.log(e))
+                })
+        }
+        viewProjectById();
+    }, [])
+
 
     return (
         <Layout>
@@ -51,8 +51,8 @@ export default () => {
                     <Row>
                         <Col>
                             <p>Created By</p>
-                            <p>{user}</p>
-                            
+                            <p id="project_author">{user}</p>
+
                         </Col>
                         <Col>
                             <p>Date Created</p>
@@ -78,7 +78,10 @@ export default () => {
                         <Col classNameName="pt-5">
                             <h5>Project Abstract</h5>
                             <hr></hr>
-                            <p>{abstract}</p>
+                            <div className="form-group" id="project_abstract">
+                                <p>{abstract}</p>
+                            </div>
+
 
                             <Form.Group controlId="formGridProjectabstract">
                                 <Form.Label>Project abstract</Form.Label>
@@ -100,24 +103,24 @@ export default () => {
                                     <h6>Author(s)</h6>
                                 </div>
                                 <div className="card-body">
-                                {authors.map(author=>{ 
-                                return(
-                                    <>
-                                    <p>{author}</p>
-                                    </>
-                                )
-                            })}
-                                </div>
-                                <div className="card-footer" id="project_tags">
-                                    {tags.map(tag=>{ 
-                                        return(
+                                    {authors.map(author => {
+                                        return (
                                             <>
-                                            <p>{tag}</p>
+                                                <p>{author}</p>
                                             </>
                                         )
-                                        
                                     })}
-                                    
+                                </div>
+                                <div className="card-footer" id="project_tags">
+                                    {tags.map(tag => {
+                                        return (
+                                            <>
+                                                <p>{tag}</p>
+                                            </>
+                                        )
+
+                                    })}
+
                                 </div>
                             </div>
                             <div className="card">
