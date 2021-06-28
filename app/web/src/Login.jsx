@@ -65,7 +65,7 @@ export default () => {
         <Layout>
             <>
                 <Container style={{ paddingTop: 5 + '%' }}>
-                    <Form className="mx-auto w-75">
+                    <Form className="mx-auto w-75" id="loginForm">
                         <h3>Login</h3>
                         <Alert variant="danger" name="error-alert" className="alert-danger" show={showAlert}>
                             {alert}

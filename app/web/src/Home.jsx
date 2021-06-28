@@ -14,7 +14,7 @@ export default () => {
                     method: 'GET' 
                 });
                 const json = await response.json(); 
-                    setProjects(json.slice(5,9));
+                    setProjects(json.slice(0,4));
                 
                 
             }
